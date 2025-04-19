@@ -1,9 +1,11 @@
 import { useEffect, useRef } from "react";
 import homebg from "../Assets/Images/homebg.jpg";
 import homgbglg from "../Assets/Images/homebglg.png";
+import logo from "../Assets/Logos/logo.png";
 import { Icon } from '@iconify/react';
 
 import {motion} from "framer-motion"
+import SctAboutMe from "./sections/SctAboutMe";
 
 
 
@@ -12,8 +14,8 @@ export default function  Home() {
 
 
   return (
-    
-    <div className="relative w-screen h-screen font-bricolage overflow-hidden">
+    <div>
+    <div className="relative min-h-[800px] w-screen h-screen font-bricolage overflow-hidden">
       {/* Background image layer */}
       <img
         src={homebg}
@@ -34,7 +36,7 @@ export default function  Home() {
         bg-gradient-to-r from-[#7373738c] via-black to-[#ffffff5b]
         rounded-full text-white text-[20px] z-20"
       >
-        <a>Home</a>
+        <a><img src={logo} width={60} height={60}/></a>
         <div className="hidden md:flex gap-12">
           <a>Upcoming events</a>
           <a>Photos</a>
@@ -52,7 +54,7 @@ export default function  Home() {
       <motion.div  
         initial={{ opacity: 0, y: 40, scale: 0.95 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}
-        transition={{ duration: 0.5, ease: "easeOut" }}
+        transition={{ duration: 0.7, ease: "easeOut" }}
         className=" absolute inset-0 flex -top-10 flex-col items-center justify-center text-white text-center z-20">
         <h1 className="text-5xl md:text-7xl font-bold font-climateCrisis tracking-wide">
           DJ DEEP
@@ -69,8 +71,7 @@ export default function  Home() {
         className="bg-black mt-10 w-[15rem] md:w-[20rem] py-2 px-5 text-2xl rounded-full border-l-[0.1px] border-white ">Get a quote</motion.button>
       </motion.div>
     </div>
-
-
-
+    <SctAboutMe/>
+    </div>
   );
 }
