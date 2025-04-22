@@ -9,7 +9,7 @@ export default function SctAboutMe() {
     return (
 
         // about me section
-        <div className="relative flex flex-col items-center justify-center md:min-h-[800px] w-screen h-screen bg-black text-white -mt-10 pl-10 pr-10">
+        <div className="relative flex flex-col items-center justify-center md:min-h-[800px] min-h-[500px] w-screen bg-black text-white pt-20 pl-10 pr-10">
 
             <motion.div 
                 ref={ref}

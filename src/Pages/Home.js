@@ -6,6 +6,7 @@ import { Icon } from '@iconify/react';
 
 import {motion} from "framer-motion"
 import SctAboutMe from "./sections/SctAboutMe";
+import SctGallery from "./sections/SctGallery";
 
 
 
@@ -37,10 +38,11 @@ export default function  Home() {
         rounded-full text-white text-[20px] z-20"
       >
         <a><img src={logo} width={60} height={60}/></a>
-        <div className="hidden md:flex gap-12">
+        <div className="hidden md:flex gap-8 text-[0.8em] lg:text-[1em]">
           <a>Upcoming events</a>
-          <a>Photos</a>
+          <a>Gallery</a>
           <a>Mixes</a>
+          <a>Pricing</a>
         </div>
         <div className="flex gap-3 items-center">
           <a className="bg-black py-2 px-5 rounded-full border-l-[0.2px] border-white hidden md:block">Contact us</a>
@@ -72,6 +74,7 @@ export default function  Home() {
       </motion.div>
     </div>
     <SctAboutMe/>
+    <SctGallery/>
     </div>
   );
 }

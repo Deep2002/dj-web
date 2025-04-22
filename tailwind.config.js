@@ -7,7 +7,9 @@ module.exports = {
     extend: {
       animation: {
         'spin-slow': 'spin 4s linear infinite',
+        'scroll': 'scroll 20s linear infinite',
       },
+      
       fontFamily: {
         bricolage: ['"Bricolage Grotesque"', 'sans-serif'],
         climateCrisis: ['"Climate Crisis"', 'sans-serif'],
