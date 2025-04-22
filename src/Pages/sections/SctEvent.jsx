@@ -1,5 +1,8 @@
 import React from "react";
 
+import { motion, useInView } from "framer-motion";
+import { useRef, useState } from "react";
+
 const events = [
   {
     date: "Loading..",
@@ -9,7 +12,7 @@ const events = [
   {
     date: "April 14th",
     title: "Alibaba Hooka Lounge ",
-    link: "https://maps.google.com",
+    link: "https://www.google.com/maps/place/Ali+Baba+Hookah+Lounge/@32.8652684,-96.9785134,17z/data=!3m1!4b1!4m6!3m5!1s0x864e835eda425d45:0x398336612e30de8b!8m2!3d32.8652684!4d-96.9759385!16s%2Fg%2F11pr4vxk8_?entry=ttu&g_ep=EgoyMDI1MDQyMC4wIKXMDSoASAFQAw%3D%3D",
   },
   {
     date: "March 15th",
@@ -19,14 +22,29 @@ const events = [
 ];
 
 export default function SctEvent() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
   return (
     <section className="w-full bg-black px-4 py-10 sm:py-12 flex justify-center">
-      <div className="w-full max-w-6xl rounded-xl p-4 sm:p-6 md:p-8 shadow-xl backdrop-blur-md">
-        <h2 className="text-white text-2xl sm:text-3xl md:text-4xl font-bold mb-6 text-center sm:text-left">
+      <motion.div
+        ref={ref}
+        initial={{ opacity: 0, y: 40, scale: 1 }}
+        animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
+        transition={{ duration: 0.7, ease: "easeOut" }}
+        className="w-full max-w-6xl rounded-xl p-4 sm:p-6 md:p-8 shadow-xl backdrop-blur-md]"
+      >
+        <h2 className="text-white text-3xl sm:text-3xl md:text-4xl font-bold mb-6 text-center sm:text-left font-bricolage">
           Upcoming Events
         </h2>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+        <motion.div
+          ref={ref}
+          initial={{ opacity: 0, y: 40, scale: 1 }}
+          animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
+          transition={{ duration: 0.7, ease: "easeOut" }}
+          className="grid grid-cols-1 lg:grid-cols-2 gap-4"
+        >
           {events.map((event, idx) => (
             <div
               key={idx}
@@ -36,7 +54,9 @@ export default function SctEvent() {
                 <span className="bg-red-600 text-white text-xs sm:text-sm font-semibold px-3 py-1 rounded-full">
                   {event.date}
                 </span>
-                <span className="text-white text-sm sm:text-base font-medium">{event.title}</span>
+                <span className="text-white text-sm sm:text-base font-medium">
+                  {event.title}
+                </span>
               </div>
 
               <a
@@ -49,9 +69,8 @@ export default function SctEvent() {
               </a>
             </div>
           ))}
-          
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 }
