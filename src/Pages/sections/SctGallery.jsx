@@ -62,7 +62,7 @@ export default function SctGallery() {
         initial={{ opacity: 0, y: 40, scale: 1 }}
         animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
         transition={{ duration: 0.7, ease: "easeOut" }}
-       className="text-white text-4xl font-bold text-center mb-12">Gallery</motion.h2>
+       className="text-white text-2xl sm:text-3xl md:text-4xl font-bold font-bold text-center mb-12">Gallery</motion.h2>
       <div className="relative w-full">
       <motion.div
           className="flex gap-4 w-max"

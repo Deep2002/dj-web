@@ -7,6 +7,7 @@ import { Icon } from '@iconify/react';
 import {motion} from "framer-motion"
 import SctAboutMe from "./sections/SctAboutMe";
 import SctGallery from "./sections/SctGallery";
+import SctEvent from "./sections/SctEvent";
 
 
 
@@ -75,6 +76,7 @@ export default function  Home() {
     </div>
     <SctAboutMe/>
     <SctGallery/>
+    <SctEvent/>
     </div>
   );
 }
