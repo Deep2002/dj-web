@@ -3,7 +3,7 @@ import { useRef, useState } from "react";
 
 export default function SctAboutMe() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
+  const isInView = useInView(ref, { once: false });
 
   return (
     // about me section

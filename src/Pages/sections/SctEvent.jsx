@@ -23,7 +23,7 @@ const events = [
 
 export default function SctEvent() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
+  const isInView = useInView(ref, { once: false });
 
   return (
     <section className="w-full bg-black px-4 py-10 sm:py-12 flex justify-center">
