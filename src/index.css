@@ -2,10 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-
-button,
-a,
-input,
-textarea {
-  cursor: none !important;
+@media (min-width: 768px) {
+  button,
+  a,
+  iframe:hover
+   {
+    cursor: none !important;
+  }
 }
