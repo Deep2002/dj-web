@@ -1,7 +1,7 @@
 import React from "react";
 
 import { motion, useInView } from "framer-motion";
-import { useRef, useState } from "react";
+import { useRef } from "react";
 
 const events = [
   {
@@ -26,7 +26,10 @@ export default function SctEvent() {
   const isInView = useInView(ref, { once: false });
 
   return (
-    <section className="w-full bg-black px-4 py-10 sm:py-12 flex justify-center">
+    <section
+      id="events"
+      className="w-full bg-black px-4 py-10 sm:py-12 flex justify-center"
+    >
       <motion.div
         ref={ref}
         initial={{ opacity: 0, y: 40, scale: 1 }}

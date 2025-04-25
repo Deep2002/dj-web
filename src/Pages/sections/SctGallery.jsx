@@ -12,7 +12,7 @@ export default function SctGallery() {
     try {
       media.push({
         type: "image",
-        src: require(`../../Assets/Images2/${i}.jpg`),
+        src: require(`../../Assets/Images/${i}.jpg`),
       });
     } catch (e) {
       console.error(`Image ${i}.jpg not found`);
@@ -52,7 +52,7 @@ export default function SctGallery() {
   );
 
   return (
-    <div className="w-full bg-black py-20 overflow-hidden">
+    <div id="gallery" className="w-full bg-black py-20 overflow-hidden">
       <motion.h2
         ref={ref}
         initial={{ opacity: 0, y: 40 }}

@@ -18,7 +18,7 @@ export default function SctMixes() {
   const isButtonInView = useInView(buttonRef, { once: false });
 
   return (
-    <div className="py-24 bg-black">
+    <div id="mixes" className="py-24 bg-black">
       <motion.h2
         ref={h2Ref}
         initial={{ opacity: 0, y: 40, scale: 1 }}

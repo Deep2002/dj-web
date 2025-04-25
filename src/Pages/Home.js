@@ -1,4 +1,3 @@
-import { useEffect, useRef } from "react";
 import homebg from "../Assets/Images/homebg.jpg";
 import homgbglg from "../Assets/Images/homebglg.png";
 import logo from "../Assets/Logos/logo.png";
@@ -11,11 +10,30 @@ import SctEvent from "./sections/SctEvent";
 import SctMixes from "./sections/SctMixes";
 import SctContactMe from "./sections/SctContactMe";
 import SctFooter from "./sections/SctFooter";
+import { useState } from "react";
 
 export default function Home() {
   const scrollToGetQuote = () => {
     const section = document.getElementById("getQuote");
     section?.scrollIntoView({ behavior: "smooth" });
+  };
+  const scrollToEvents= () => {
+    const section = document.getElementById("events");
+    section?.scrollIntoView({ behavior: "smooth" });
+  };
+  const scrollToMixes= () => {
+    const section = document.getElementById("mixes");
+    section?.scrollIntoView({ behavior: "smooth" });
+  };
+  const scrollToGallery = () => {
+    const section = document.getElementById("gallery");
+    section?.scrollIntoView({ behavior: "smooth" });
+  };
+
+
+  const [isMenuVisible, setIsMenuVisible] = useState(false);
+  const toggleMenu = () => {
+    setIsMenuVisible(!isMenuVisible);
   };
 
   return (
@@ -41,12 +59,12 @@ export default function Home() {
           bg-gradient-to-r from-[#7373738c] via-black to-[#ffffff5b]
           rounded-full text-white text-[20px] z-30"
         >
-          <a><img src={logo} width={60} height={60} /></a>
+          <a href="#"><img src={logo} width={60} height={60} /></a>
           <div className="hidden md:flex gap-8 text-[0.8em] lg:text-[1em]">
-            <a>Upcoming events</a>
-            <a>Gallery</a>
-            <a>Mixes</a>
-            <a>Pricing</a>
+            <button className="hover:underline" onClick={scrollToEvents}>Upcoming events</button>
+            <button className="hover:underline" onClick={scrollToGallery}>Gallery</button>
+            <button className="hover:underline" onClick={scrollToMixes}>Mixes</button>
+            <button className="hover:underline" onClick={scrollToGetQuote}>Pricing</button>
           </div>
           <div className="flex gap-3 items-center">
             {/* Desktop button */}
@@ -58,10 +76,26 @@ export default function Home() {
             </button>
 
             {/* Mobile button (icon for now, can be full button if you want) */}
-            <button className="md:hidden">
-              <Icon icon="pepicons-pop:menu" color="#fff" width={28} height={28} />
+            <button onClick={toggleMenu} className="md:hidden">
+              <Icon
+                icon={!isMenuVisible ? 'pepicons-pop:menu' : 'pepicons-pop:menu-off'}
+                color="#fff"
+                width={28}
+                height={28}
+              />
             </button>
           </div>
+
+          {isMenuVisible && (
+            <div className="absolute top-16 left-1/2 transform -translate-x-1/2 bg-black rounded-lg shadow-lg p-5 w-[90%] max-w-[300px] z-40 md:hidden">
+              <ul className="flex flex-col gap-4 text-white text-lg">
+                <li><button onClick={scrollToEvents}>Upcoming events</button></li>
+                <li><button onClick={scrollToGallery}>Gallery</button></li>
+                <li><button onClick={scrollToMixes}>Mixes</button></li>
+                <li><button onClick={scrollToGetQuote}>Pricing</button></li>
+              </ul>
+            </div>
+          )}
         </div>
 
         {/* Centered Content */}
