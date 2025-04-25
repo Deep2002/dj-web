@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import './App.css';
 
 import Home from './Pages/Home';
@@ -10,8 +10,8 @@ function App() {
   
   return (
     
+    
     <div className='bg-[#02080C] w-screen h-screen'>
-      <body className="cursor-none"/>
       <CustomCursor />
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

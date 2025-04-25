@@ -1,5 +1,3 @@
-import React from "react";
-
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
@@ -22,25 +20,39 @@ export default function SctContactMe() {
           Get a Quote
         </h2>
 
-        <form className="flex flex-col space-y-4">
+        <form
+          action="https://formsubmit.co/f2096fbcaefa0ee6645a8b05f153b829"
+          method="POST"
+          className="flex flex-col space-y-4"
+        >
           <input
             type="text"
             placeholder="Name"
+            name="name"
             className="px-4 py-2 rounded-md bg-white text-black placeholder-gray-500 focus:outline-none"
+            required
           />
+
           <input
             type="text"
+            name="phone"
             placeholder="Phone"
+            required
             className="px-4 py-2 rounded-md bg-white text-black placeholder-gray-500 focus:outline-none"
           />
           <input
             type="email"
+            name="email"
             placeholder="Email"
+            required
             className="px-4 py-2 rounded-md bg-white text-black placeholder-gray-500 focus:outline-none"
           />
           <textarea
+            type="text"
+            name="message"
             placeholder="What are you looking for?"
             rows="4"
+            required
             className="px-4 py-2 rounded-md bg-white text-black placeholder-gray-500 focus:outline-none resize-none"
           ></textarea>
 

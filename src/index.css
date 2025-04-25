@@ -5,9 +5,8 @@
 @media (min-width: 768px) {
   button,
   a,
-  input,
-  iframe:hover,
-  textarea {
+  iframe:hover
+   {
     cursor: none !important;
   }
 }

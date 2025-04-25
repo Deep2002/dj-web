@@ -59,7 +59,7 @@ export default function Home() {
           bg-gradient-to-r from-[#7373738c] via-black to-[#ffffff5b]
           rounded-full text-white text-[20px] z-30"
         >
-          <a href="#"><img src={logo} width={60} height={60} /></a>
+          <button href="#"><img src={logo} width={60} height={60} alt="logo"/></button>
           <div className="hidden md:flex gap-8 text-[0.8em] lg:text-[1em]">
             <button className="hover:underline" onClick={scrollToEvents}>Upcoming events</button>
             <button className="hover:underline" onClick={scrollToGallery}>Gallery</button>
