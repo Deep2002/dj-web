@@ -7,11 +7,12 @@ export default function SctGallery() {
 
   const media = [];
 
-  for (let i = 1; i <= 20; i++) {
+  for (let i = 1; i <= 10; i++) {
+    // Limiting to 10 pairs
     try {
       media.push({
         type: "image",
-        src: require(`../../Assets/Images/${i}.jpg`),
+        src: require(`../../Assets/Images2/${i}.jpg`),
       });
     } catch (e) {
       console.error(`Image ${i}.jpg not found`);
@@ -28,7 +29,7 @@ export default function SctGallery() {
   }
 
   const MediaItem = ({ type, src }) => (
-    <div className="w-[300px] h-[380px] rounded-xl overflow-hidden bg-neutral-800 shrink-0">
+    <div className="w-[300px] h-[380px] rounded-xl overflow-hidden bg-neutral-800 shrink-0 will-change-transform">
       {type === "video" ? (
         <video
           src={src}
@@ -37,7 +38,7 @@ export default function SctGallery() {
           muted
           autoPlay
           playsInline
-          preload="none"
+          preload="metadata"
         />
       ) : (
         <img
@@ -51,21 +52,22 @@ export default function SctGallery() {
   );
 
   return (
-    <div className="w-full overflow-hidden bg-black py-20">
+    <div className="w-full bg-black py-20 overflow-hidden">
       <motion.h2
         ref={ref}
-        initial={{ opacity: 0, y: 40, scale: 1 }}
-        animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
+        initial={{ opacity: 0, y: 40 }}
+        animate={isInView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.7, ease: "easeOut" }}
-        className="text-white text-4xl md:text-4xl font-bold font-bold text-center mb-12 font-bricolage"
+        className="text-white text-4xl font-bold text-center mb-12 font-bricolage"
       >
         Gallery
       </motion.h2>
-      <div className="relative w-full">
+
+      <div className="relative w-full overflow-hidden">
         <motion.div
           className="flex gap-4 w-max"
-          animate={{ x: ["0%", "-50%"], ease: "easeInOut" }}
-          transition={{ repeat: Infinity, duration: 40, ease: "linear" }}
+          animate={{ x: ["0%", "-50%"] }}
+          transition={{ repeat: Infinity, duration: 35, ease: "linear" }}
         >
           {[...media, ...media].map((item, idx) => (
             <MediaItem key={idx} {...item} />

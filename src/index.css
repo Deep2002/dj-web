@@ -6,6 +6,7 @@
 button,
 a,
 input,
+iframe:hover,
 textarea {
   cursor: none !important;
 }

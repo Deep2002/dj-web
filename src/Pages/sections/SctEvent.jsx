@@ -5,7 +5,7 @@ import { useRef, useState } from "react";
 
 const events = [
   {
-    date: "Loading..",
+    date: "Loading Up..",
     title: "Garba Night",
     link: "https://maps.google.com",
   },
@@ -32,7 +32,7 @@ export default function SctEvent() {
         initial={{ opacity: 0, y: 40, scale: 1 }}
         animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
         transition={{ duration: 0.7, ease: "easeOut" }}
-        className="w-full max-w-6xl rounded-xl p-4 sm:p-6 md:p-8 shadow-xl backdrop-blur-md]"
+        className="w-full max-w-6xl rounded-xl  shadow-xl backdrop-blur-md]"
       >
         <h2 className="text-white text-3xl sm:text-3xl md:text-4xl font-bold mb-6 text-center sm:text-left font-bricolage">
           Upcoming Events

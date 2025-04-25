@@ -18,7 +18,7 @@ export default function SctMixes() {
   const isButtonInView = useInView(buttonRef, { once: false });
 
   return (
-    <div className="py-20 bg-black">
+    <div className="py-24 bg-black">
       <motion.h2
         ref={h2Ref}
         initial={{ opacity: 0, y: 40, scale: 1 }}
@@ -30,7 +30,7 @@ export default function SctMixes() {
       </motion.h2>
 
       <div className="flex justify-center items-center px-5 md:px-10 w-full flex-col">
-        <div className="w-full max-w-6xl aspect-video">
+        <div className="w-full max-w-6xl aspect-video flex flex-col items-center">
           <motion.iframe
             ref={iframe1Ref}
             initial={{ opacity: 0, y: 40, scale: 1 }}
@@ -64,23 +64,22 @@ export default function SctMixes() {
             allow="autoplay"
             src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1911591197&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=true&show_teaser=false"
           />
-        </div>
-        <motion.button
-          ref={buttonRef}
-          initial={{ opacity: 0, y: 40, scale: 1 }}
-          animate={isButtonInView ? { opacity: 1, y: 0, scale: 1 } : {}}
-          transition={{ duration: 0.7, ease: "easeOut" }}
-          className="mt-8 px-6 py-3 bg-[#333] text-white rounded-lg hover:bg-[#111] transition-colors"
-        >
-          <a
-            href="https://soundcloud.com/deep-parmar-122230752"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-white text-sm font-semibold"
+          <motion.button
+            ref={buttonRef}
+            initial={{ opacity: 0, y: 40, scale: 1 }}
+            animate={isButtonInView ? { opacity: 1, y: 0, scale: 1 } : {}}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+            className="mt-8 px-6 py-3 bg-[#000] border-white border-[1px] text-white rounded-lg hover:bg-[#fff] hover:text-black hover:border-black transition-colors duration-500 ease-in-out max-w-[500px]"
+            onClick={() =>
+              window.open(
+                "https://soundcloud.com/deep-parmar-122230752",
+                "_blank"
+              )
+            }
           >
-            More on SoundCloud →
-          </a>
-        </motion.button>
+            <span className="text-sm font-semibold">More on SoundCloud →</span>
+          </motion.button>
+        </div>
       </div>
     </div>
   );
