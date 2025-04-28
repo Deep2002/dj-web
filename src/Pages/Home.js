@@ -11,6 +11,7 @@ import SctMixes from "./sections/SctMixes";
 import SctContactMe from "./sections/SctContactMe";
 import SctFooter from "./sections/SctFooter";
 import { useState } from "react";
+import SocialIsland from "../Components/SocialIsland";
 
 export default function Home() {
   const scrollToGetQuote = () => {
@@ -86,6 +87,7 @@ export default function Home() {
             </button>
           </div>
 
+
           {isMenuVisible && (
             <div className="absolute top-16 left-1/2 transform -translate-x-1/2 bg-black rounded-lg shadow-lg p-5 w-[90%] max-w-[300px] z-40 md:hidden">
               <ul className="flex flex-col gap-4 text-white text-lg">
@@ -122,6 +124,7 @@ export default function Home() {
           >
             Get a quote
           </motion.button>
+          <SocialIsland/>
         </motion.div>
       </div>
 
