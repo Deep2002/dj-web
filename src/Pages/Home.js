@@ -78,7 +78,7 @@ export default function Home() {
             {/* Mobile button (icon for now, can be full button if you want) */}
             <button onClick={toggleMenu} className="md:hidden">
               <Icon
-                icon={!isMenuVisible ? 'pepicons-pop:menu' : 'pepicons-pop:menu-off'}
+                icon={!isMenuVisible ? 'pepicons-pop:menu' : 'line-md:close'}
                 color="#fff"
                 width={28}
                 height={28}
@@ -111,7 +111,7 @@ export default function Home() {
             FOREAL
           </h1>
           <p className="mt-4 md:text-lg text-sm font-light font-bricolage">
-            Bollywood | Nepali | Tollywood | Reggaeton
+            Bollywood | Hollywood | Nepali | Tollywood
           </p>
           <motion.button
             onClick={scrollToGetQuote}

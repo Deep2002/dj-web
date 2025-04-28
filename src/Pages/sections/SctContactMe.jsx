@@ -21,7 +21,7 @@ export default function SctContactMe() {
         </h2>
 
         <form
-          action="https://formsubmit.co/f2096fbcaefa0ee6645a8b05f153b829"
+          action="https://formsubmit.co/963789fb7642e30ea90e2863a95fd0f0"
           method="POST"
           className="flex flex-col space-y-4"
         >
@@ -33,13 +33,48 @@ export default function SctContactMe() {
             required
           />
 
-          <input
-            type="text"
-            name="phone"
-            placeholder="Phone"
-            required
-            className="px-4 py-2 rounded-md bg-white text-black placeholder-gray-500 focus:outline-none"
-          />
+          <div className="flex flex-col md:flex-row gap-4">
+            <select
+              name="countryCode"
+              className="px-4 py-2 rounded-md bg-white text-black placeholder-gray-500 focus:outline-none w-full md:w-1/4 h-10"
+              required
+            >
+              <option value="+1">+1 (USA/Canada)</option>
+              <option value="+91">+91 (India)</option>
+              <option value="+44">+44 (UK)</option>
+              <option value="+61">+61 (Australia)</option>
+              <option value="+49">+49 (Germany)</option>
+              <option value="+33">+33 (France)</option>
+              <option value="+81">+81 (Japan)</option>
+              <option value="+55">+55 (Brazil)</option>
+              <option value="+34">+34 (Spain)</option>
+              <option value="+39">+39 (Italy)</option>
+              <option value="+52">+52 (Mexico)</option>
+              <option value="+971">+971 (UAE)</option>
+              <option value="+45">+45 (Denmark)</option>
+              <option value="+47">+47 (Norway)</option>
+              <option value="+46">+46 (Sweden)</option>
+              <option value="+53">+53 (Cuba)</option>
+              <option value="+62">+62 (Indonesia)</option>
+              <option value="+27">+27 (South Africa)</option>
+              <option value="+54">+54 (Argentina)</option>
+              <option value="+1">+1 (Canada)</option>
+              <option value="+20">+20 (Egypt)</option>
+              <option value="+66">+66 (Thailand)</option>
+              <option value="+82">+82 (South Korea)</option>
+              <option value="+354">+354 (Iceland)</option>
+              <option value="+380">+380 (Ukraine)</option>
+            </select>
+
+            <input
+              type="text"
+              name="phone"
+              placeholder="Phone Number"
+              required
+              className="px-4 py-2 rounded-md bg-white text-black placeholder-gray-500 focus:outline-none w-full md:w-3/4"
+            />
+          </div>
+
           <input
             type="email"
             name="email"
@@ -47,8 +82,8 @@ export default function SctContactMe() {
             required
             className="px-4 py-2 rounded-md bg-white text-black placeholder-gray-500 focus:outline-none"
           />
+
           <textarea
-            type="text"
             name="message"
             placeholder="What are you looking for?"
             rows="4"

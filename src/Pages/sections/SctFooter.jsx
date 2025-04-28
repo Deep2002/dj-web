@@ -26,7 +26,7 @@ export default function SctFooter() {
         </a>
         . And Developed by{" "}
         <a
-          href="https://www.instagram.com/dj_deep_foreal/"
+          href="https://www.linkedin.com/in/deep-parmar-4903931a7/"
           target="_blank"
           rel="noopener noreferrer"
           className="text-blue-800 hover:underline items-center justify-center font-semibold text-white"

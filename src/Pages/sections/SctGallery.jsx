@@ -3,7 +3,7 @@ import { useRef } from "react";
 
 export default function SctGallery() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: false });
+  const isInView = useInView(ref, { once: true });
 
   const media = [];
 
