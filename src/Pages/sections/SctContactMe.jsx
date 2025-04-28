@@ -17,7 +17,7 @@ export default function SctContactMe() {
         className="backdrop-blur-md bg-gradient-to-br from-[#7373738c] via-black to-[#ffffff5b] border-[#ffffff5b] border-[0.2px] shadow-xl rounded-lg p-8 sm:p-10 w-full max-w-md sm:max-w-lg relative"
       >
         <h2 className="text-white text-3xl sm:text-4xl font-bold text-center mb-8 font-bricolage">
-          Get a Quote
+          Contact Us
         </h2>
 
         <form

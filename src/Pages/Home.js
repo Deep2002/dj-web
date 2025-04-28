@@ -11,6 +11,8 @@ import SctMixes from "./sections/SctMixes";
 import SctContactMe from "./sections/SctContactMe";
 import SctFooter from "./sections/SctFooter";
 import { useState } from "react";
+import SocialIsland from "../Components/SocialIsland";
+import SctPricing from "./sections/SctPricing";
 
 export default function Home() {
   const scrollToGetQuote = () => {
@@ -27,6 +29,11 @@ export default function Home() {
   };
   const scrollToGallery = () => {
     const section = document.getElementById("gallery");
+    section?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const scrollToPricing = () => {
+    const section = document.getElementById("pricing");
     section?.scrollIntoView({ behavior: "smooth" });
   };
 
@@ -64,7 +71,7 @@ export default function Home() {
             <button className="hover:underline" onClick={scrollToEvents}>Upcoming events</button>
             <button className="hover:underline" onClick={scrollToGallery}>Gallery</button>
             <button className="hover:underline" onClick={scrollToMixes}>Mixes</button>
-            <button className="hover:underline" onClick={scrollToGetQuote}>Pricing</button>
+            <button className="hover:underline" onClick={scrollToPricing}>Pricing</button>
           </div>
           <div className="flex gap-3 items-center">
             {/* Desktop button */}
@@ -86,13 +93,15 @@ export default function Home() {
             </button>
           </div>
 
+
           {isMenuVisible && (
             <div className="absolute top-16 left-1/2 transform -translate-x-1/2 bg-black rounded-lg shadow-lg p-5 w-[90%] max-w-[300px] z-40 md:hidden">
               <ul className="flex flex-col gap-4 text-white text-lg">
-                <li><button onClick={scrollToEvents}>Upcoming events</button></li>
-                <li><button onClick={scrollToGallery}>Gallery</button></li>
-                <li><button onClick={scrollToMixes}>Mixes</button></li>
-                <li><button onClick={scrollToGetQuote}>Pricing</button></li>
+                <li className="hover:text-[#B156C1]" ><button onClick={scrollToEvents}>Upcoming events</button></li>
+                <li className="hover:text-[#B156C1]"><button onClick={scrollToGallery}>Gallery</button></li>
+                <li className="hover:text-[#B156C1]"><button onClick={scrollToMixes}>Mixes</button></li>
+                <li className="hover:text-[#B156C1]"><button onClick={scrollToPricing}>Pricing</button></li>
+                <li className="hover:text-[#B156C1]"><button onClick={scrollToGetQuote}>Contact Us</button></li>
               </ul>
             </div>
           )}
@@ -114,7 +123,7 @@ export default function Home() {
             Bollywood | Hollywood | Nepali | Tollywood
           </p>
           <motion.button
-            onClick={scrollToGetQuote}
+            onClick={scrollToPricing}
             initial={{ opacity: 0, y: 40, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ duration: 0.3, ease: "easeOut" }}
@@ -122,6 +131,7 @@ export default function Home() {
           >
             Get a quote
           </motion.button>
+          <SocialIsland/>
         </motion.div>
       </div>
 
@@ -129,6 +139,7 @@ export default function Home() {
       <SctGallery />
       <SctEvent />
       <SctMixes />
+      <SctPricing />
       <SctContactMe />
       <SctFooter />
     </div>
