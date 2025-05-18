@@ -24,7 +24,7 @@ export default function SctMixes() {
         initial={{ opacity: 0, y: 40, scale: 1 }}
         animate={isH2InView ? { opacity: 1, y: 0, scale: 1 } : {}}
         transition={{ duration: 0.7, ease: "easeOut" }}
-        className="text-white text-4xl sm:text-3xl md:text-4xl font-bold text-center mb-12 font-bricolage"
+        className="text-5xl sm:text-6xl font-bold mb-16 text-center font-bricolage tracking-tight text-white py-10"
       >
         My Mixes
       </motion.h2>

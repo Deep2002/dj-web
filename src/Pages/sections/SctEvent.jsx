@@ -10,6 +10,11 @@ const events = [
     link: "https://maps.google.com",
   },
   {
+    date: "May 23rd",
+    title: "Bollywood Night - Top Shots",
+    link: "https://www.google.com/maps/place/Sambuca+360+Live+Italian+Kitchen/@33.0770116,-96.8261197,17z/data=!3m2!4b1!5s0x864c3cb3c7277e63:0x7edf0a3a6f70b685!4m6!3m5!1s0x864c3cb3b611069b:0x44b61042d0ec7c39!8m2!3d33.0770117!4d-96.8212488!16s%2Fg%2F1tfcj4mz?entry=ttu&g_ep=EgoyMDI1MDUxNS4wIKXMDSoASAFQAw%3D%3D",
+  },
+  {
     date: "April 14th",
     title: "Alibaba Hooka Lounge ",
     link: "https://www.google.com/maps/place/Ali+Baba+Hookah+Lounge/@32.8652684,-96.9785134,17z/data=!3m1!4b1!4m6!3m5!1s0x864e835eda425d45:0x398336612e30de8b!8m2!3d32.8652684!4d-96.9759385!16s%2Fg%2F11pr4vxk8_?entry=ttu&g_ep=EgoyMDI1MDQyMC4wIKXMDSoASAFQAw%3D%3D",
@@ -37,7 +42,7 @@ export default function SctEvent() {
         transition={{ duration: 0.7, ease: "easeOut" }}
         className="w-full max-w-6xl rounded-xl  shadow-xl backdrop-blur-md]"
       >
-        <h2 className="text-white text-3xl sm:text-3xl md:text-4xl font-bold mb-6 text-center sm:text-left font-bricolage">
+        <h2 className="text-white text-5xl sm:text-6xl font-bold mb-16 text-center font-bricolage tracking-tight py-10">
           Upcoming Events
         </h2>
 

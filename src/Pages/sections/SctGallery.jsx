@@ -58,7 +58,7 @@ export default function SctGallery() {
         initial={{ opacity: 0, y: 40 }}
         animate={isInView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.7, ease: "easeOut" }}
-        className="text-white text-4xl font-bold text-center mb-12 font-bricolage"
+        className="text-white text-5xl sm:text-6xl font-bold mb-16 text-center font-bricolage tracking-tight py-10"
       >
         Gallery
       </motion.h2>
